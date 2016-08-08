@@ -1,0 +1,20 @@
+<ion-view >
+<!-- header -->
+	<div class="bar bar-header bar-assertive">
+
+	<h1 class="title">
+	Reviews
+	</h1>
+	</div>
+	
+<ion-content class="has-header" >
+<ul class="list" ng-repeat='audio in audios'>
+	<li class="item">
+		<audio controls preload="none" >
+	 		<source src="{{audio.audio_url}}" type="audio/mp4" />
+	 		<p>Your browser does not support HTML5 audio.</p>
+	 	</audio>
+	</li>
+</ul>
+</ion-content>
+</ion-view>

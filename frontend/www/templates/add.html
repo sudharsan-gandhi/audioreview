@@ -1,0 +1,75 @@
+<ion-view>
+<!-- header -->
+<div class="bar bar-header bar-assertive"><h1 class='title'>{{title}}</h1></div>
+<!-- close header -->
+
+<!-- content -->
+<ion-content class="has-header">
+	<div class="list list-inset">
+	
+	  <!-- <label class="item item-input item-floating-label">
+	    <span class="input-label">Movie Name</span>
+	    <input ng-model='name' type="text" placeholder="Movie Name">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Release Year</span>
+	    <input ng-model='year' type="text" placeholder="Release Year">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Genre</span>
+	    <input ng-model='genre' type="text" placeholder="Genre">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Length</span>
+	    <input ng-model='length' type="text" placeholder="Length">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Direction</span>
+	    <input ng-model='direction' type="text" placeholder="Direction">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Language</span>
+	    <input ng-model='language' type="text" placeholder="Language">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Location</span>
+	    <input ng-model='location' type="text" placeholder="Location">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Collections</span>
+	    <input ng-model='collections' type="text" placeholder="Collections">
+	  </label>
+	  <label class="item item-input item-floating-label">
+	    <span class="input-label">Thumbnail</span>
+	    <input ng-model='thumbnail' type="file" placeholder="Thumbnail">
+	  </label> -->
+	  <button class="button button-energized" id="recordbuttton" ng-click="record()"><i class="icon ion-mic-c"></i></button>
+	  <button class="button button-energized" ng-click="stop()"><i class="icon ion-stop"></i></button>
+	  <button class="button button-energized" ng-click="playback()"><i class="icon ion-play"></i></button>
+	  <button class="button button-balanced" ng-click="upload()"><i class="icon ion-upload"></i></button>
+	</div>
+	<div>
+	<form ref='uploadForm' 
+            id='uploadForm'
+            action="{{url}}" 
+            method='post' 
+            encType="multipart/form-data">
+
+	<label class="item item-input item-floating-label">
+			<input type="file" name="file" />
+	  </label>
+	  <label class="item item-input">
+	    <input type='submit' value='Upload!' />
+	    <label>
+        </form>
+	  <div>
+
+
+
+</ion-content>
+<!-- close content -->
+
+
+</ion-view>
+
+

@@ -1,0 +1,60 @@
+<ion-view >
+<!-- navbar -->
+<ion-nav-bar class="bar-positive">          
+    
+   			 <ion-nav-buttons side="right">
+    				<button class="button button-balanced" ng-click='redirect()'>
+			 			add review
+					</button>
+			</ion-nav-buttons>
+			<!--  -->
+			<!-- <ion-nav-buttons side="left">
+				<label class="item item-input" ng-model="search.name">
+    				<input type="text" placeholder="search">
+  				</label>
+  			</ion-nav-buttons> -->
+
+   		
+    </ion-nav-bar>
+<!-- header -->
+	<div class="bar bar-header bar-assertive">
+
+	<h1 class="title">
+	Movie Detail
+	</h1>
+	</div>
+	
+<ion-content class="has-header" >
+	<div class="list card" collection-repeat="movie in movie">
+	<div class="item item-thumbnail-left">
+	<img ng-src="{{ movie.thumbnails }}">
+          <h2>{{ movie.name }}</h2>
+          <h4>{{ movie.year }}</h4>
+          <p class='subdued'>genre: {{movie.genre}}</p>
+
+	</div>
+	<div class='item item-body'>
+	<a href="#" class="item item-icon-left">
+    <i class="icon ion-home"></i>
+    {{movie.language}}
+  </a>
+	<p class='subdued'>duration: {{movie.duration}}</p>
+
+	<a class="item item-icon-left assertive" href="#">
+    <i class="icon ion-ios-star-half"></i>
+     {{movie.rating}}
+  </a>
+	</div>
+	<div class='item'>
+	<button ng-click='showreviews()' class="button button-energized">
+	view reviews
+	</button>
+
+
+
+	</div>
+
+</ion-content>
+
+
+</ion-view>

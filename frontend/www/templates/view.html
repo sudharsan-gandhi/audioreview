@@ -1,0 +1,63 @@
+
+	<!-- header and footer start -->
+
+	<ion-view >
+<!-- nav items -->
+	<ion-nav-bar class="bar-positive">          
+    
+   			 <ion-nav-buttons side="right">
+    				<button class="button button-balanced" ng-click='locale()'>
+			 			get <i class="icon ion-android-locate finc" ></i>
+					</button>
+			</ion-nav-buttons>
+			<!--  -->
+			<!-- <ion-nav-buttons side="left">
+				<label class="item item-input" ng-model="search.name">
+    				<input type="text" placeholder="search">
+  				</label>
+  			</ion-nav-buttons> -->
+
+   		
+    </ion-nav-bar>
+    	<!-- header -->
+	<div class="bar bar-header bar-assertive"><h1 class="title"><a><i class = "icon ion-videocamera finc"></i> </a>{{title}} </h1>
+
+	</div>
+	<!-- sub header -->
+	<div class="bar bar-subheader bar-positive">
+	  <h2 class="title" ng-if="location"><i class="icon ion-location finc"></i> {{location}}</h2>
+	    <div align-title="right">
+			
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="bar bar-footer bar-assertive">
+	  <div class="title"><i class="icon ion-clock finc"></i> {{time}}</div>
+	</div>
+
+	<!-- header and footer end -->
+
+
+	<!-- listing movies -->
+	
+	<ion-content class="has-subheader">
+	<ion-refresher pulling-text='release to load' on-refresh="doRefresh()">
+
+      </ion-refresher>
+	<input type="search"
+        placeholder="Filter movies..."
+        ng-model="search">
+	
+	
+	<div class="list" collection-repeat="movie in movies | orderBy:'year' | filter:search ">
+
+		<a class="item item-icon-left" href='#/each/{{movie.id}}'><i class="icon ion-eye"></i>
+			<h2>{{movie.name}}</h2>
+			<p>{{movie.year}}</p>
+		</a>
+	</div>
+	</ion-content>
+	</ion-view>
+
+
+
